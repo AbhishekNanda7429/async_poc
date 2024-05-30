@@ -5,13 +5,7 @@ import aioboto3
 sqs_client = aioboto3.client('sqs')
 
 async def send_to_sqs(queue_url, message_body):
-    """
-    Sends a message to an SQS queue asynchronously.
 
-    Args:
-        queue_url (str): The URL of the SQS queue.
-        message_body (str): The message body to send.
-    """
     response = await sqs_client.send_message(
         QueueUrl=queue_url,
         MessageBody=message_body
