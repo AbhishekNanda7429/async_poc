@@ -1,3 +1,3 @@
 # async_poc
 
-added "venv" in the gitignore file 
+its a lambda code to test the batching concept 
