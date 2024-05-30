@@ -13,13 +13,7 @@ async def send_to_sqs(queue_url, message_body):
     print(f"Message sent to {queue_url}: {message_body}")
 
 def lambda_handler(event, context):
-    """
-    AWS Lambda function handler.
 
-    Args:
-        event (dict): The event data from the Lambda invocation.
-        context (dict): The context data from the Lambda invocation.
-    """
     queue_url = 'https://sqs.ap-south-1.amazonaws.com/891377261145/BufferQueue'
     messages = event.get("messages", [])
 
